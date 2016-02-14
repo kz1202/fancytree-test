@@ -30,8 +30,11 @@ public class ApiController {
 //		  ]}
 //		]		
 		lombok.val result = new ArrayList<TreeNode>();
-		result.add(new TreeNode("Node1", UUID.randomUUID().toString(), null, null, null));
-		result.add(new TreeNode("Node2", UUID.randomUUID().toString(), true, null, true));
+		
+		result.add(new TreeNode("folder", UUID.randomUUID().toString(), true, null, true));
+		for(int i = 0; i < 30; i++) {
+			result.add(new TreeNode("file" + i, UUID.randomUUID().toString(), null, null, null));
+		}
 //		
 //				new ArrayList<TreeNode>() {
 //					private static final long serialVersionUID = 1L;
